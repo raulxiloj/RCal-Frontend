@@ -1,11 +1,11 @@
-.container{
-    height: 100vh;
-}
-
 .calendar-screen{
     display: flex;
     flex-flow: column;
     height: 100vh;
+}
+
+.container{
+    height: 80%;
 }
 
 .rbc-calendar {
