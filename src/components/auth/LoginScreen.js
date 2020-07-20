@@ -7,7 +7,7 @@ export const LoginScreen = () => {
 
     return (
         <div className="container-2">
-            <div className={formSign ? 'container' : 'container right-panel-active'} id="container">
+            <div className={formSign ? 'cont' : 'cont right-panel-active'} id="cont">
 
                 <div className="form-container sign-up-container">
                     <form >
