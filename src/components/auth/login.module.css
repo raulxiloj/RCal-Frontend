@@ -22,9 +22,8 @@ p {
 	margin: 20px 0 30px;
 }
 
-span {
-	font-size: 12px;
-}
+/**/
+
 
 a {
 	color: #333;
@@ -33,7 +32,7 @@ a {
 	margin: 15px 0;
 }
 
-button {
+.button {
 	border-radius: 20px;
 	border: 1px solid white;
 	background-color: #1d1e22;
