@@ -59,7 +59,7 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
-form {
+.form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -70,7 +70,7 @@ form {
 	text-align: center;
 }
 
-input {
+.input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -78,7 +78,7 @@ input {
 	width: 100%;
 }
 
-.container-2{
+.container{
 	display: flex;
 	justify-content: center;
 	align-items: center;
