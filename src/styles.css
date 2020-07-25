@@ -61,3 +61,40 @@
 .react-datetime-picker__wrapper {
     border: 0px solid gray !important;
 }
+
+/*FAB*/
+
+.fab {
+    border-radius: 50%;
+    bottom: 25px;
+    font-size: 25px;
+    padding: 20px;
+    position: fixed;
+    right: 20px;
+    background-color: #0f2862;
+    color: white
+}
+
+.fab:hover {
+    color: lightgray;
+    background-color: #1e3364;
+}
+
+.btnSave {
+    background-color: #003871;
+    color: white;
+}
+
+.btnSave:hover{
+    background-color: #0f5090;
+    color: lightgray;
+}
+
+.fab-danger{
+    bottom: 25px;
+    padding: 10px;
+    position: fixed;
+    left: 20px;
+    background-color: #a64452;
+    color: white
+}
