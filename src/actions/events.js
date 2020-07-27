@@ -13,7 +13,7 @@ export const eventStartAddNew = (event) => {
             const body = await res.json();
 
             if (body.ok) {
-                event.id = body.event.id;
+                event._id = body.event._id;
                 event.user = {
                     _id: uid,
                     name

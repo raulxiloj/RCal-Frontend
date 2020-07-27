@@ -40,8 +40,8 @@ export const CalendarModal = () => {
     const [dateEnd, setDateEnd] = useState(nowPlus1.toDate());
     const [validTitle, setValidTitle] = useState(true)
 
-    const [fomrValues, setFomrValues] = useState(initEvent);
-    const { title, desc } = fomrValues;
+    const [formValues, setFomrValues] = useState(initEvent);
+    const { title, desc } = formValues;
 
     useEffect(() => {
 
@@ -56,7 +56,7 @@ export const CalendarModal = () => {
     const handleInputChange = ({ target }) => {
 
         setFomrValues({
-            ...fomrValues,
+            ...formValues,
             [target.name]: target.value
         })
 
@@ -64,14 +64,15 @@ export const CalendarModal = () => {
 
     const closeModal = () => {
         dispatch(uiCloseModal());
-        setFomrValues(initEvent);
         dispatch(eventClearActiveEvent());
+        setFomrValues(initEvent);
+
     }
 
     const handleStartDateChange = (e) => {
         setDateStart(e);
         setFomrValues({
-            ...fomrValues,
+            ...formValues,
             start: e
         });
     }
@@ -79,8 +80,8 @@ export const CalendarModal = () => {
     const handleEndDateChange = (e) => {
         setDateEnd(e);
         setFomrValues({
-            ...fomrValues,
-            end: e
+            ...formValues,
+            end: dateEnd
         });
     }
 
@@ -90,12 +91,10 @@ export const CalendarModal = () => {
         if (title.trim().length < 2)
             return setValidTitle(false);
 
-        //TODO save in DB
-
         if (activeEvent) {//Updating
-            dispatch(eventStartUpdate(fomrValues));
+            dispatch(eventStartUpdate(formValues));
         } else {//New
-            dispatch(eventStartAddNew(fomrValues));
+            dispatch(eventStartAddNew(formValues));
         }
 
         setValidTitle(true);
