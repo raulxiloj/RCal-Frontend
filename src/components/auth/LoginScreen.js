@@ -12,8 +12,8 @@ export const LoginScreen = () => {
 
     /* ------------------- LOGIN ------------------- */
     const [formLoginValues, handleLoginInputChange] = useForm({
-        lEmail: 'raul@gmail.com',
-        lPassword: '123456'
+        lEmail: '',
+        lPassword: ''
     });
 
     const { lEmail, lPassword } = formLoginValues;
@@ -25,10 +25,10 @@ export const LoginScreen = () => {
 
     /* ------------------- REGISTER --------------------*/
     const [formRegisterValues, handleRegisterInputChange] = useForm({
-        rName: 'Raulin',
-        rEmail: 'raulin@gmail.com',
-        rPassword: '123456',
-        rPassword2: '123456'
+        rName: '',
+        rEmail: '',
+        rPassword: '',
+        rPassword2: ''
     });
 
     const { rName, rEmail, rPassword, rPassword2 } = formRegisterValues;
@@ -37,11 +37,10 @@ export const LoginScreen = () => {
         e.preventDefault();
 
         if (rPassword !== rPassword2) {
-            Swal.fire('Error', 'Passwords should match', 'error');
+            return Swal.fire('Error', 'Passwords should match', 'error');
         }
 
         dispatch(startRegister(rName, rEmail, rPassword));
-
 
     }
 
