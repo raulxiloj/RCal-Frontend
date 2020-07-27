@@ -57,13 +57,15 @@ export const LoginScreen = () => {
                                 placeholder="Name"
                                 name="rName"
                                 value={rName}
-                                onChange={handleRegisterInputChange} />
+                                onChange={handleRegisterInputChange}
+                                autoComplete="off" />
                             <input className={`${styles['input']}`}
                                 type="email"
                                 placeholder="Email"
                                 name="rEmail"
                                 value={rEmail}
-                                onChange={handleRegisterInputChange} />
+                                onChange={handleRegisterInputChange}
+                                autoComplete="off" />
                             <input className={`${styles['input']}`}
                                 type="password"
                                 placeholder="Password"
@@ -90,7 +92,8 @@ export const LoginScreen = () => {
                                 placeholder="Email"
                                 name="lEmail"
                                 value={lEmail}
-                                onChange={handleLoginInputChange} />
+                                onChange={handleLoginInputChange}
+                                autoComplete="off" />
                             <input className={`${styles['input']}`}
                                 type="password"
                                 placeholder="Password"
